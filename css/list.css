@@ -1,0 +1,126 @@
+/* 列表页专有的css */
+.nav {
+    /* 因为每个商品分类的height超过下边线，要将溢出部分隐藏 */
+    overflow: hidden;
+}
+/* 秒杀logo */
+.header .kill_logo {
+    position: absolute;
+    top: 40px;
+    left: 190px;
+    border-left: 1px solid #c40000;
+    padding-left: 14px;
+    padding-top: 3px;
+}
+/* nav商品导航栏 左侧 */
+.sk_list {
+    float: left;
+}
+.sk_list li {
+    float: left;
+    margin: 0 27px;
+}
+.sk_list li a {
+    color: black;
+    font-size: 16px;
+    line-height: 45px;
+    font-weight: 800;
+}
+/* nav商品导航栏 右侧 */
+.sk_con li {
+    float: left;
+    margin-left: 43px;
+}
+.sk_con li:last-child::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+}
+.sk_con li a {
+    /* color: #666; */
+    font-size: 14px;
+    line-height: 50px;
+}
+
+/* 商品列表 */
+.sk_bd li {
+    position: relative;
+    float: left;
+    width: 290px;
+    height: 460px;
+    margin-right: 13px;
+    /* 因为是css3的盒子模型，鼠标经过显示边框，若原来没有边框则会导致鼠标经过内容缩小，看起来好像在抖动 */
+    /* 解决方案：原本的盒子也设置边框，只不过是透明色，鼠标经过只是变颜色 */
+    border: 1px solid transparent;
+}
+.sk_bd li:nth-child(4n) {
+    margin-right: 0;
+}
+.sk_bd li:nth-child(n+5) {
+    margin-top: 1px;
+}
+/* 每一个小li商品的详情介绍 */
+.sk_bd li .good img {
+    width: 100%;
+}
+.sk_bd li .good p:first-of-type {
+    font-size: 14px;
+    color: #666;
+    margin: 0 15px 15px 15px;
+}
+.sk_bd li .good p:nth-of-type(2) span:nth-of-type(1) {
+    color: #e60012;
+    font-size: 20px;
+    font-weight: 800px;
+    margin-left: 15px;
+}
+.sk_bd li .good p:nth-of-type(2) span:nth-of-type(2) {
+    color: #a4a4a4;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: line-through;
+}
+.sk_bd li .good p:nth-of-type(3) {
+    font-size: 12px;
+    color: #666;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+.sk_bd li .good p:nth-of-type(3) span:nth-of-type(1) {
+    font-style: italic;
+    color: #f24349;
+}
+.sk_bd li .bar {
+    display: inline-block;
+    position: relative;
+    width: 130px;
+    height: 10px;
+    border-radius: 5px;
+    border: 1px solid #b1191a;
+    line-height: 10px;
+    vertical-align: middle;
+}
+.sk_bd li .bar i {
+    position: absolute;
+    width: 87%;
+    height: 10px;
+    background-color: #f24349;
+    border-radius: 4px 0 0 2px;
+}
+.sk_bd li .good p:nth-of-type(3) span:nth-of-type(3) {
+    color: #f24349;
+}
+.sk_bd li .good button {
+    position: absolute;
+    bottom: 0;
+    width: 290px;
+    height: 50px;
+    background-color: #b1191a;
+    border: 0;
+    margin-top: 5px;
+    font-size: 20px;
+    color: white;
+}
+/* 鼠标经过显示红色边框 */
+.sk_bd li:hover {
+    border: 1px solid #c40000;
+}

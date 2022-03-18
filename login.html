@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <!-- 网站说明 -->
+    <meta name="description" content="品优购-专业的综合网上购物商城,销售家电、数码通讯、电脑、
+        家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物
+        体验!">
+    <!-- 关键词 -->
+    <meta name="keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配
+        件,手表,存储卡,品优购">
+    <!-- 引入网站favicon图标 -->
+    <link rel=" shortcut icon" href="favicon.ico" />
+    <!-- 引入初始化css样式 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 引入公共css样式 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 引入main主体样式 -->
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <header class="w">
+        <div class="logo">
+            <h1><a href="index.html" title="品优购商城">品优购商城</a></h1>
+        </div>
+    </header>
+    <div class="log_middle">
+        <div class="log_body">
+            <ul>
+                <li class="mode"><a href="#">扫描登录</a><i>|</i><a href="#">账户登录</a></li>
+                <li class="notice">公共场所不建议自动登录，以免账号丢失</li>
+                <form action="log.php">
+                    <li class="account"><i></i><input type="text" placeholder="邮箱/用户/手机号"></li>
+                    <li class="pwd"><i></i><input type="password" placeholder="请输入密码"></li>
+                    <li class="auto">
+                        <input type="checkbox" id="auto_login">
+                        <label for="auto_login">自动登录</label>
+                        <a href="#">忘记密码？</a>
+                    </li>
+                    <li class="btn"><button>登录</button></li>
+                </form>
+                <li class="icons">
+                    <img src="./upload/log_03.png" alt="">
+                    <em>立即注册</em>
+                </li>
+        </div>
+    </div>
+    <!-- 底部模块footer -->
+    <div class="footer">
+        <div class="w">
+            <div class="mod_copyright">
+                <div class="links">
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">联系客服</a></li>
+                    <li><a href="#">商家入驻</a></li>
+                    <li><a href="#">营销中心</a></li>
+                    <li><a href="#">手机品优购</a></li>
+                    <li><a href="#">友情链接</a></li>
+                    <li><a href="#">销售联盟</a></li>
+                    <li><a href="#">品优购社区</a></li>
+                    <li><a href="#">品优购公益</a></li>
+                    <li><a href="#">English Site</a></li>
+                    <li><a href="#">Contact U</a></li>
+                </div>
+                <p class="copyright">
+                    地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100
+                    邮箱: zhanghj+itcast.cn<br>
+                    京ICP备08001421号京公网安备110108007702
+                </p>
+            </div>
+        </div>
+    </div>
+</body>

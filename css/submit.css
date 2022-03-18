@@ -1,0 +1,294 @@
+/* 头部区域搜索框 */
+
+.header {
+    position: relative;
+    height: 82px;
+}
+.header .logo {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 180px;
+    height: 60px;
+}
+
+.header .logo a {
+    display: block;
+    width: 180px;
+    height: 60px;
+    background: url(../images/logo.png) no-repeat;
+    /* 淘宝的做法 */
+    /* text-indent: -9999px;
+    overflow: hidden; */
+    /* 京东的做法 */
+    font-size: 0px;
+}
+
+.header .buycar {
+    position: absolute;
+    top: 42px;
+    left: 196px;
+    font-size: 19px;
+    color: #333;
+}
+/* 搜索框 */
+.header .find {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 540px;
+    height: 35px;
+}
+
+.header .find input {
+    float: left;
+    width: 455px;
+    height: 35px;
+    border: 2px solid #b1191a;
+    border-right: 0;
+}
+.header .find input::placeholder {
+    font-size: 14px;
+    color: #666;
+    padding-left: 10px;
+}
+
+.header .find button {
+    float: right;
+    width: 85px;
+    height: 35px;
+    background-color: #b1191a;
+    font-size: 16px;
+    color: white;
+}
+
+/******************************** mian主体部分 **********************************************************/
+main {
+    height: 1115px;
+}
+main h4 {
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.info_bd {
+    height: 950px;
+    border: 1px solid #ccc;
+    border-bottom: transparent;
+}
+
+.info_bd li:nth-child(-n+4) {
+    margin: 0 auto;
+    width: 1150px;
+    border-bottom: 1px solid #ccc;
+    margin-right: 34px;
+}
+.info_bd li:nth-child(n+5) {
+    /* width: 1200px; */
+    margin: 0;
+    padding-right: 34px;
+    border-bottom: 1px solid #ccc;
+}
+
+.info_bd h5 {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-left: 24px;
+}
+.info_bd h6 {
+    font-size: 12px;
+    color: #666;
+    padding: 20px 0px 0px 20px;
+    font-weight: 600;
+}
+
+/* 收件人信息 */
+.recipient {
+    position: relative;
+    height: 155px;
+}
+.recipient h5 {
+    padding-top: 41px;
+}
+.recipient .new {
+    position: absolute;
+    color: #1474af;
+    top: 40px;
+    right: 33px;
+}
+.br {
+    display: inline-block;
+    height: 30px;
+    width: 144px;
+    line-height: 26px;
+    text-align: center;
+    border: 2px solid #c81623;
+    margin: 22px 10px 18px 42px;
+}
+.recipient .more {
+    margin-left: 42px;
+}
+.recipient .more::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+}
+/* 匹配自提点 */
+.match {
+    height: 70px;
+    line-height: 70px;
+}
+.match em {
+    border: 1px solid #ccc;
+}
+/* 支付方式 */
+.pay {
+    height: 105px;
+}
+.pay em {
+    display: inline-block;
+    width: 98px;
+    height: 28px;
+    line-height: 26px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.pay .ml53 {
+    margin-left: 53px;
+}
+.pay .border_red {
+    border: 2px solid #c81623;
+    line-height: 24px;
+    margin-right: 26px;
+}
+/* 送货清单 */
+.red_color {
+    color: #e12228;
+}
+.list {
+    height: 335px;
+}
+.list .way1 {
+    position: relative;
+    height: 100px;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+    margin-bottom: 1px;
+}
+.list .way2 {
+    position: relative;
+    height: 155px;
+    background-color: #feedef;
+}
+.way1 a {
+    position: absolute;
+    top: 55px;
+    right: 68px;
+    color: #1474af;
+}
+.way2 img {
+    position: absolute;
+    left: 44px;
+    top: 50px;
+    width: 85px;
+    height: 85px;
+}
+.way2 .info {
+    position: absolute;
+    width: 335px;
+    top: 50px;
+    left: 195px;
+}
+.way2 span {
+    position: absolute;
+    left: 195px;
+    bottom: 31px;
+}
+.way2 p {
+    position: absolute;
+    top: 55px;
+    left: 880px;
+
+}
+.way2 p em {
+    padding-right: 46px;
+}
+.way2 p .red_color {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* 发票信息 */
+.invoice {
+    height: 120px;
+}
+.invoice em {
+    display: inline-block;
+    padding-left: 42px;
+    margin: 13px 0px;
+}
+.invoice label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    padding-left: 24px;
+}
+.invoice label::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+}
+.invoice a {
+    color: #1474af;
+}
+
+/* 商品价格 */
+.money {
+    position: relative;
+    height: 92px;
+}
+.money p:first-child {
+    position: absolute;
+    right: 160px;
+    top: 20px;
+    text-align: right;
+}
+.money p:nth-child(2) {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    text-align: right;
+}
+/* 应付总金额 */
+.total {
+    position: relative;
+    overflow: hidden;
+    height: 72px;
+    background-color: #f4f4f4;
+}
+.total p {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    text-align: right;
+}
+.total .red_color {
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 25px;
+}
+/* 提交订单按钮 */
+.submit {
+    width: 145px;
+    height: 45px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #df3033;
+    margin-top: 20px;
+    margin-left: 1025px;
+}
+

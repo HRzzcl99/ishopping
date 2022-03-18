@@ -1,0 +1,366 @@
+/* 头部区域搜索框 */
+
+.header {
+    position: relative;
+    height: 82px;
+}
+
+.header .logo {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 180px;
+    height: 60px;
+}
+
+.header .logo a {
+    display: block;
+    width: 180px;
+    height: 60px;
+    background: url(../images/logo.png) no-repeat;
+    /* 淘宝的做法 */
+    /* text-indent: -9999px;
+    overflow: hidden; */
+    /* 京东的做法 */
+    font-size: 0px;
+}
+
+.header .buycar {
+    position: absolute;
+    top: 42px;
+    left: 196px;
+    font-size: 19px;
+    color: #333;
+}
+
+/* 搜索框 */
+.header .find {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 540px;
+    height: 35px;
+}
+
+
+.header .find input {
+    float: left;
+    width: 455px;
+    height: 35px;
+    border: 2px solid #b1191a;
+    border-right: 0;
+}
+
+.header .find input::placeholder {
+    font-size: 14px;
+    color: #666;
+    padding-left: 10px;
+}
+
+.header .find button {
+    float: right;
+    width: 85px;
+    height: 35px;
+    background-color: #b1191a;
+    font-size: 16px;
+    color: white;
+}
+
+/* mian主体部分 */
+.check_gbc {
+    background-color: #fff9f6;
+}
+
+.shop {
+    margin: 20px 0;
+}
+
+.tit-top {
+    margin: 25px 0 15px;
+    font-size: 16px;
+}
+
+.tit-con {
+    width: 100%;
+    height: 38px;
+    background-color: #f5f5f5;
+    line-height: 38px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tit-con .con-good {
+    text-align: center;
+}
+
+.con-1 {
+    width: 50%;
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.con-1 div:nth-of-type(1) {
+    width: 20%;
+}
+
+.con-1 div:nth-of-type(1) .con-inp {
+    vertical-align: middle;
+    transform: translateY(-1px);
+    margin: 0 5px;
+}
+
+.con-1 div:nth-of-type(2) {
+    width: 80%;
+}
+
+.con-2 {
+    width: 50%;
+    height: 38px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.red {
+    color: red;
+}
+
+.shop-tit {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #9c9c9c;
+    margin-bottom: 15px;
+}
+
+.shop-name {
+    background-color: #b90000;
+    color: white;
+    padding: 2px;
+}
+
+.shop-content {
+    width: 100%;
+    height: 108px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #cfcfcf;
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-bottom: -1px;
+}
+
+.shop-content p {
+    white-space: pre;
+    line-height: 25px;
+}
+
+.shop-content input {
+    transform: translateY(-20px);
+    margin: 0 5px;
+}
+
+.shop-number {
+    text-align: center;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.btn-box {
+    width: 100px;
+    height: 30px;
+}
+
+.btn-box div {
+    font-size: 16px;
+    float: left;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #b3b0a8;
+}
+
+.btn-box div a {
+    display: block;
+    /* width: 100%; */
+}
+
+.btn-box .number {
+    width: 40%;
+    border-left: none;
+    border-right: none;
+}
+
+.btn-box .number input {
+    width: 100%;
+    font-size: 16px;
+    /* padding: 5px 0; */
+    margin: 0;
+    transform: translateY(0px);
+    text-align: center;
+    color: #666;
+    /* border: 1px solid #333; */
+}
+
+.long {
+    height: 200px;
+}
+
+.long .long-tit {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.con-bot {
+    color: #a7a7a7;
+    position: relative;
+    top: 12px;
+    left: -23px;
+}
+
+.long-change {
+    width: 40px;
+    padding: 2px 8px;
+    margin-left: 5px;
+    border: 1px solid #cc0000;
+    color: #cc0000;
+}
+
+.settle-account {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #cfcfcf;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+
+.settle-account .account-price {
+    color: red;
+    font-size: 18px;
+}
+
+.settle-account .skip {
+    width: 150px;
+    height: 70px;
+    background-color: #c60000;
+    color: white;
+    position: relative;
+    top: -20px;
+    right: -23px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 70px;
+    cursor: pointer;
+}
+
+.good-del {
+    margin: 20px 0;
+}
+
+.good-del .del-concent {
+    width: 100%;
+    height: 40px;
+    background-color: #fffdee;
+    padding: 5px;
+    box-sizing: border-box;
+    line-height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.good-del .del-price,
+.good-del .del-number {
+    font-size: 14px;
+    color: black;
+}
+
+.you-like {
+    width: 100%;
+}
+
+.you-like .like {
+    background-color: #f1f1f1;
+}
+
+.you-like .like span {
+    display: inline-block;
+    height: 100%;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.you-like .current {
+    background-color: #cf0000;
+    color: white;
+}
+
+.side-out {
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    height: 315px;
+    width: 1226px;
+    margin: 25px auto 10px;
+}
+
+.side-btn {
+    width: 50px;
+    height: 100%;
+    line-height: 315px;
+}
+
+.side-btn span {
+    background-color: #a5a5a5;
+    cursor: pointer;
+    padding: 20px 5px;
+}
+
+.side-box {
+    height: 315px;
+    width: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+
+.side-list {
+    height: 100%;
+    width: 1500px;
+    position: absolute;
+}
+
+.side-child {
+    width: 250px;
+    height: 280px;
+    float: left;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border: 1px dashed #a5a5a5;
+    margin-right: -1px;
+}
+
+.side-child button {
+    margin-top: 15px;
+    color: black;
+    font-size: 16px;
+    width: 130px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #e5e5e5;
+    border: 1px solid #a5a5a5;
+}
+
+.side-child img {
+    width: 100%;
+}
+
+.center {
+    display: block;
+    text-align: center;
+    margin: auto;
+}

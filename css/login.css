@@ -1,0 +1,119 @@
+/* 头部logo */
+/* .logo {
+    height: 81px;
+    line-height: 81px;
+} */
+header {
+    position: relative;
+    /* margin-top: 30px; */
+    height: 82px;
+}
+.logo {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 180px;
+    height: 60px;
+}
+
+.log_middle {
+    position: relative;
+    height: 475px;
+    background: url(../upload/login_bd.png) no-repeat;
+}
+
+.log_middle .log_body {
+    position: absolute;
+    top: 63px;
+    right: 476px;
+    width: 380px;
+    height: 364px;
+    background-color: #fff;
+    padding-left: 37px;
+
+}
+/* 扫码登录还是账户登录 */
+.log_body .mode {
+    font-size: 18px;
+    color: #666;
+    height: 63px;
+    line-height: 63px;
+
+}
+.log_body .mode i {
+    margin: 0 68px;
+    color: #ccc;
+}
+/* 提醒：公共场所不建议自动登录 */
+.log_body .notice {
+    width: 300px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #fffded;
+    border: 1px solid #f5eecf;
+    padding-left: 10px;
+}
+/* form表单输入：账号和密码 */
+.account,
+.pwd {
+    width: 300px;
+    height: 36px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    vertical-align: middle;
+    overflow: hidden;
+
+}
+.account:hover,
+.pwd:hover {
+    border-color: #3aa2e4;
+}
+.account input,
+.pwd input {
+    float: left;
+    width: 263px;
+    line-height: 35px;
+    padding-left: 10px;
+}
+.pwd i,
+.account i {
+    float: left;
+    width: 36px;
+    height: 36px;
+    background: url(../upload/log_01.png) no-repeat;
+}
+.pwd i {
+    background: url(../upload/log_02.png) no-repeat;
+}
+
+/* 自动登录和忘记密码 */
+.auto {
+    height: 55px;
+    line-height: 55px;
+    vertical-align: middle;
+}
+.auto input {
+    display: inline-block;
+    margin-right: 5px;
+}
+.auto a {
+    margin-left: 170px;
+    color: #333;
+}
+/* 登录按钮 */
+.btn button {
+    height: 40px;
+    width: 300px;
+    background-color: #ca111a;
+    color: white;
+}
+
+/* 登录方式和注册 */
+.icons {
+    margin-top: 30px;
+    margin-left: -20px;
+}
+
+.icons em {
+    color: #3aa2e4;
+}
