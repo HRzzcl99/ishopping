@@ -19,12 +19,30 @@
     <link rel="stylesheet" href="./css/base.css">
     <!-- 引入公共css样式 -->
     <link rel="stylesheet" href="./css/common.css">
+    <!-- 引入swiper样式 -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <!-- 引入main主体样式 -->
     <link rel="stylesheet" href="./css/index.css">
-
+    <!-- 引入jQuery库 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- 引入swiper js 文件 -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- 引入 index js 文件 -->
+    <script src="js/index.js"></script>
 </head>
 
 <body>
+    <!-- 侧边电梯导航栏 -->
+    <div class="fixedtool">
+        <ul>
+            <li class="current"><a href="JavaScript:;">家用电器</a></li>
+            <li><a href="JavaScript:;">手机通讯</a></li>
+            <li><a href="JavaScript:;">服饰搭配</a></li>
+            <li><a href="JavaScript:;">电脑办公</a></li>
+            <li><a href="JavaScript:;">医药保健</a></li>
+            <li><a href="JavaScript:;">图书影像</a></li>
+        </ul>
+    </div>
     <!-- 快速导航栏 -->
     <div class="shortcut">
         <div class=" w">
@@ -60,7 +78,7 @@
         </div>
         <!-- <img src="./images/logo.png" alt="logo"> -->
         <div class="search">
-            <input type="text" placeholder="语言开发">
+            <input type="text" placeholder="欢迎选购, 按s光标定位到此处">
             <button>搜索</button>
         </div>
         <ul class="hotwords">
@@ -80,7 +98,7 @@
             <div class="dropdown">
                 <div class="dt">全部商品分类</div>
                 <div class="dd">
-                    <li><a href="#">家用电器</a></li>
+                    <!-- <li><a href="#">家用电器</a></li>
                     <li><a href="./list.html">手机、数码、通信</a></li>
                     <li><a href="#">家居、家具、家装、厨具</a></li>
                     <li><a href="#">男装、女装、童装、内衣</a></li>
@@ -94,7 +112,1398 @@
                     <li><a href="#">电脑、办公</a></li>
                     <li><a href="#">图书、音像、电子书</a></li>
                     <li><a href="#">彩票、旅行、充值、票务</a></li>
-                    <li><a href="#">理财、众筹、白条、保险</a></li>
+                    <li><a href="#">理财、众筹、白条、保险</a></li> -->
+                    <div class="all-sort-list2">
+                        <!--一级导航循环开始-->
+                        <div class="item">
+                            <h3><a href="">家用电器</a></h3>
+                            <div class="item-list clearfix">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">电视</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">超薄电视</a></em>
+                                            <em><a href="#">全面屏电视</a></em>
+                                            <em><a href="#">智能电视</a></em>
+                                            <em><a href="#">OLED电视</a></em>
+                                            <em><a href="#">曲面电视</a></em>
+                                            <em><a href="#">4K超清电视</a></em>
+                                            <em><a href="#">55英寸</a></em>
+                                            <em><a href="#">65英寸</a></em>
+                                            <em><a href="#">电视配件</a></em>
+                                            <em><a href="#">电视配件</a></em>
+                                            <em><a href="#">电视配件</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">空调</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">空调挂机</a></em>
+                                            <em><a href="#">空调柜机</a></em>
+                                            <em><a href="#">精选推荐</a></em>
+                                            <em><a href="#">中央空调</a></em>
+                                            <em><a href="#">移动空调</a></em>
+                                            <em><a href="#">省电空调</a></em>
+                                            <em><a href="#">变频空调</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">洗衣机</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">滚筒洗衣机</a></em>
+                                            <em><a href="#">洗烘一体机</a></em>
+                                            <em><a href="#">波轮洗衣机</a></em>
+                                            <em><a href="#">迷你洗衣机</a></em>
+                                            <em><a href="#">烘干机</a></em>
+                                            <em><a href="#">洗衣机配件</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">冰箱</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">多门</a></em>
+                                            <em><a href="#">对开门</a></em>
+                                            <em><a href="#">三门</a></em>
+                                            <em><a href="#">双门</a></em>
+                                            <em><a href="#">冷柜/冰吧</a></em>
+                                            <em><a href="#">酒柜</a></em>
+                                            <em><a href="#">冰箱配件</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">厨卫大电</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">油烟机</a></em>
+                                            <em><a href="#">燃气灶</a></em>
+                                            <em><a href="#">烟灶套装</a></em>
+                                            <em><a href="#">集成灶</a></em>
+                                            <em><a href="#">消毒柜</a></em>
+                                            <em><a href="#">洗碗机</a></em>
+                                            <em><a href="#">电热水器</a></em>
+                                            <em><a href="#">燃气热水器</a></em>
+                                            <em><a href="#">空气能热水器</a></em>
+                                            <em><a href="#">太阳能热水器</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">厨房小电</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">破壁机</a></em>
+                                            <em><a href="#">电烤箱</a></em>
+                                            <em><a href="#">电饭煲</a></em>
+                                            <em><a href="#">电压力锅</a></em>
+                                            <em><a href="#">电炖锅</a></em>
+                                            <em><a href="#">豆浆机</a></em>
+                                            <em><a href="#">料理机</a></em>
+                                            <em><a href="#">咖啡机</a></em>
+                                            <em><a href="#">电饼铛</a></em>
+                                            <em><a href="#">榨汁机/原汁机</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3><a href="">手机/运营商/数码</a></h3>
+                            <div class="item-list clearfix" style="display: none;">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">手机通讯</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">手机</a></em>
+                                            <em><a href="#">游戏手机</a></em>
+                                            <em><a href="#">老人机</a></em>
+                                            <em><a href="#">对讲机</a></em>
+                                            <em><a href="#">手机维修</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">运营商</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">合约机</a></em>
+                                            <em><a href="#">选号码</a></em>
+                                            <em><a href="#">固话宽带</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">手机配件</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">手机壳</a></em>
+                                            <em><a href="#">贴膜</a></em>
+                                            <em><a href="#">手机存储卡</a></em>
+                                            <em><a href="#">数据线</a></em>
+                                            <em><a href="#">充电器</a></em>
+                                            <em><a href="#">手机耳机</a></em>
+                                            <em><a href="#">创意配件</a></em>
+                                            <em><a href="#">手机饰品</a></em>
+                                            <em><a href="#">手机电池</a></em>
+                                            <em><a href="#">苹果周边</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">摄影摄像</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">数码相机</a></em>
+                                            <em><a href="#">单电/微单相机</a></em>
+                                            <em><a href="#">单反相机</a></em>
+                                            <em><a href="#">拍立得</a></em>
+                                            <em><a href="#">运动相机</a></em>
+                                            <em><a href="#">摄像机</a></em>
+                                            <em><a href="#">镜头</a></em>
+                                            <em><a href="#">户外器材</a></em>
+                                            <em><a href="#">影棚器材</a></em>
+                                            <em><a href="#">冲印服务</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">数码配件</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">存储卡</a></em>
+                                            <em><a href="#">三脚架/云台</a></em>
+                                            <em><a href="#">相机包</a></em>
+                                            <em><a href="#">滤镜</a></em>
+                                            <em><a href="#">闪光灯/手柄</a></em>
+                                            <em><a href="#">相机清洁/贴膜</a></em>
+                                            <em><a href="#">机身附件</a></em>
+                                            <em><a href="#">镜头附件</a></em>
+                                            <em><a href="#">读卡器</a></em>
+                                            <em><a href="#">支架</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">影音娱乐</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">耳机/耳麦</a></em>
+                                            <em><a href="#">音箱/音响</a></em>
+                                            <em><a href="#">智能音箱</a></em>
+                                            <em><a href="#">便携/无线音箱</a></em>
+                                            <em><a href="#">收音机</a></em>
+                                            <em><a href="#">麦克风</a></em>
+                                            <em><a href="#">MP3/MP4</a></em>
+                                            <em><a href="#">专业音频</a></em>
+                                            <em><a href="#">音频线</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3><a href="">电脑/办公</a></h3>
+                            <div class="item-list clearfix" style="display: none;">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">电脑整机</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">笔记本</a></em>
+                                            <em><a href="#">游戏本</a></em>
+                                            <em><a href="#">平板电脑</a></em>
+                                            <em><a href="#">平板电脑配件</a></em>
+                                            <em><a href="#">台式机</a></em>
+                                            <em><a href="#">一体机</a></em>
+                                            <em><a href="#">服务器/工作站</a></em>
+                                            <em><a href="#">笔记本配件</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">电脑配件</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">显示器</a></em>
+                                            <em><a href="#">CPU</a></em>
+                                            <em><a href="#">主板</a></em>
+                                            <em><a href="#">显卡</a></em>
+                                            <em><a href="#">硬盘</a></em>
+                                            <em><a href="#">内存</a></em>
+                                            <em><a href="#">机箱</a></em>
+                                            <em><a href="#">电源</a></em>
+                                            <em><a href="#">散热器</a></em>
+                                            <em><a href="#">显示器支架</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">外设产品</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">鼠标</a></em>
+                                            <em><a href="#">键盘</a></em>
+                                            <em><a href="#">键鼠套装</a></em>
+                                            <em><a href="#">网络仪表仪器</a></em>
+                                            <em><a href="#">U盘</a></em>
+                                            <em><a href="#">移动硬盘</a></em>
+                                            <em><a href="#">鼠标垫</a></em>
+                                            <em><a href="#">摄像头</a></em>
+                                            <em><a href="#">线缆</a></em>
+                                            <em><a href="#">手写板</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">游戏设备</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">游戏机</a></em>
+                                            <em><a href="#">游戏耳机</a></em>
+                                            <em><a href="#">手柄/方向盘</a></em>
+                                            <em><a href="#">游戏软件</a></em>
+                                            <em><a href="#">游戏周边</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">网络产品</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">路由器</a></em>
+                                            <em><a href="#">网络机顶盒</a></em>
+                                            <em><a href="#">交换机</a></em>
+                                            <em><a href="#">网络存储</a></em>
+                                            <em><a href="#">网卡</a></em>
+                                            <em><a href="#">4G/3G上网</a></em>
+                                            <em><a href="#">网线</a></em>
+                                            <em><a href="#">网络配件</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">办公设备</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">投影机</a></em>
+                                            <em><a href="#">投影配件</a></em>
+                                            <em><a href="#">多功能一体机</a></em>
+                                            <em><a href="#">打印机</a></em>
+                                            <em><a href="#">传真设备</a></em>
+                                            <em><a href="#">验钞/点钞机</a></em>
+                                            <em><a href="#">扫描设备</a></em>
+                                            <em><a href="#">复合机</a></em>
+                                            <em><a href="#">碎纸机</a></em>
+                                            <em><a href="#">考勤门禁</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3><a href="">家居/家具/家装/厨具</a></h3>
+                            <div class="item-list clearfix" style="display: none;">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">厨具</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">炒锅</a></em>
+                                            <em><a href="#">碗碟套装</a></em>
+                                            <em><a href="#">锅具套装</a></em>
+                                            <em><a href="#">茶具</a></em>
+                                            <em><a href="#">咖啡具</a></em>
+                                            <em><a href="#">保温杯</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">家纺</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">四件套</a></em>
+                                            <em><a href="#">被子</a></em>
+                                            <em><a href="#">枕芯</a></em>
+                                            <em><a href="#">毛巾浴巾</a></em>
+                                            <em><a href="#">蚊帐</a></em>
+                                            <em><a href="#">凉席</a></em>
+                                            <em><a href="#">地毯地垫</a></em>
+                                            <em><a href="#">床垫/床褥</a></em>
+                                            <em><a href="#">毯子</a></em>
+                                            <em><a href="#">抱枕靠垫</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">生活日用</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">收纳用品</a></em>
+                                            <em><a href="#">雨伞雨具</a></em>
+                                            <em><a href="#">净化除味</a></em>
+                                            <em><a href="#">浴室用品</a></em>
+                                            <em><a href="#">洗晒/熨烫</a></em>
+                                            <em><a href="#">缝纫/针织用品</a></em>
+                                            <em><a href="#">保暖防护</a></em>
+                                            <em><a href="#">清洁工具</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">家装软饰</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">装饰字画</a></em>
+                                            <em><a href="#">装饰摆件</a></em>
+                                            <em><a href="#">手工/十字绣</a></em>
+                                            <em><a href="#">相框/照片墙</a></em>
+                                            <em><a href="#">墙贴/装饰贴</a></em>
+                                            <em><a href="#">花瓶花艺</a></em>
+                                            <em><a href="#">香薰蜡烛</a></em>
+                                            <em><a href="#">节庆饰品</a></em>
+                                            <em><a href="#">钟饰</a></em>
+                                            <em><a href="#">帘艺隔断</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">灯具</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">吸顶灯</a></em>
+                                            <em><a href="#">吊灯</a></em>
+                                            <em><a href="#">台灯</a></em>
+                                            <em><a href="#">筒灯射灯</a></em>
+                                            <em><a href="#">庭院灯</a></em>
+                                            <em><a href="#">装饰灯</a></em>
+                                            <em><a href="#">LED灯</a></em>
+                                            <em><a href="#">氛围照明</a></em>
+                                            <em><a href="#">落地灯</a></em>
+                                            <em><a href="#">应急灯/手电</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">家具</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">客厅</a></em>
+                                            <em><a href="#">卧室</a></em>
+                                            <em><a href="#">餐厅</a></em>
+                                            <em><a href="#">书房</a></em>
+                                            <em><a href="#">储物</a></em>
+                                            <em><a href="#">办公家具</a></em>
+                                            <em><a href="#">阳台户外</a></em>
+                                            <em><a href="#">电脑桌</a></em>
+                                            <em><a href="#">电视柜</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3><a href="">男装/女装/童装/内衣</a></h3>
+                            <div class="item-list clearfix" style="display: none;">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">女装</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">当季热卖</a></em>
+                                            <em><a href="#">新品推荐</a></em>
+                                            <em><a href="#">商场同款</a></em>
+                                            <em><a href="#">时尚套装</a></em>
+                                            <em><a href="#">连衣裙</a></em>
+                                            <em><a href="#">套装裙</a></em>
+                                            <em><a href="#">半身裙</a></em>
+                                            <em><a href="#">T恤</a></em>
+                                            <em><a href="#">衬衫</a></em>
+                                            <em><a href="#">雪纺衫</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">男装</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">当季热卖</a></em>
+                                            <em><a href="#">新品推荐</a></em>
+                                            <em><a href="#">T恤</a></em>
+                                            <em><a href="#">牛仔裤</a></em>
+                                            <em><a href="#">休闲裤</a></em>
+                                            <em><a href="#">衬衫</a></em>
+                                            <em><a href="#">短裤</a></em>
+                                            <em><a href="#">POLO衫</a></em>
+                                            <em><a href="#">羽绒服</a></em>
+                                            <em><a href="#">棉服</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">内衣</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">文胸</a></em>
+                                            <em><a href="#">睡衣/家居服</a></em>
+                                            <em><a href="#">男士内裤</a></em>
+                                            <em><a href="#">女士内裤</a></em>
+                                            <em><a href="#">吊带/背心</a></em>
+                                            <em><a href="#">文胸套装</a></em>
+                                            <em><a href="#">情侣睡衣</a></em>
+                                            <em><a href="#">塑身美体</a></em>
+                                            <em><a href="#">少女文胸</a></em>
+                                            <em><a href="#">休闲棉袜</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">配饰</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">太阳镜</a></em>
+                                            <em><a href="#">光学镜架/镜片</a></em>
+                                            <em><a href="#">棒球帽</a></em>
+                                            <em><a href="#">遮阳帽</a></em>
+                                            <em><a href="#">防辐射眼镜</a></em>
+                                            <em><a href="#">女士围巾/披肩</a></em>
+                                            <em><a href="#">遮阳伞/雨伞</a></em>
+                                            <em><a href="#">老花镜</a></em>
+                                            <em><a href="#">鸭舌帽</a></em>
+                                            <em><a href="#">礼帽</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">童装</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">套装</a></em>
+                                            <em><a href="#">卫衣</a></em>
+                                            <em><a href="#">裤子</a></em>
+                                            <em><a href="#">外套/大衣</a></em>
+                                            <em><a href="#">毛衣/针织衫</a></em>
+                                            <em><a href="#">衬衫</a></em>
+                                            <em><a href="#">户外/运动服</a></em>
+                                            <em><a href="#">T恤</a></em>
+                                            <em><a href="#">裙子</a></em>
+                                            <em><a href="#">亲子装</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">童鞋</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">运动鞋</a></em>
+                                            <em><a href="#">靴子</a></em>
+                                            <em><a href="#">帆布鞋</a></em>
+                                            <em><a href="#">皮鞋</a></em>
+                                            <em><a href="#">棉鞋</a></em>
+                                            <em><a href="#">凉鞋</a></em>
+                                            <em><a href="#">拖鞋</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3><a href="">美妆/个护清洁/宠物</a></h3>
+                            <div class="item-list clearfix" style="display: none;">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">面部护肤</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">礼盒</a></em>
+                                            <em><a href="#">美白</a></em>
+                                            <em><a href="#">防晒</a></em>
+                                            <em><a href="#">面膜</a></em>
+                                            <em><a href="#">洁面</a></em>
+                                            <em><a href="#">爽肤水</a></em>
+                                            <em><a href="#">精华</a></em>
+                                            <em><a href="#">眼霜</a></em>
+                                            <em><a href="#">乳液/面霜</a></em>
+                                            <em><a href="#">卸妆</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">香水彩妆</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">隔离</a></em>
+                                            <em><a href="#">遮瑕</a></em>
+                                            <em><a href="#">气垫BB</a></em>
+                                            <em><a href="#">粉底</a></em>
+                                            <em><a href="#">腮红</a></em>
+                                            <em><a href="#">口红/唇膏</a></em>
+                                            <em><a href="#">唇釉/唇彩</a></em>
+                                            <em><a href="#">睫毛膏</a></em>
+                                            <em><a href="#">眼影</a></em>
+                                            <em><a href="#">眼线</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">男士护肤</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">控油</a></em>
+                                            <em><a href="#">洁面</a></em>
+                                            <em><a href="#">乳液/面霜</a></em>
+                                            <em><a href="#">面膜</a></em>
+                                            <em><a href="#">爽肤水</a></em>
+                                            <em><a href="#">剃须</a></em>
+                                            <em><a href="#">精华</a></em>
+                                            <em><a href="#">防晒</a></em>
+                                            <em><a href="#">套装/礼盒</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">洗发护发</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">洗发水</a></em>
+                                            <em><a href="#">护发素</a></em>
+                                            <em><a href="#">发膜/精油</a></em>
+                                            <em><a href="#">造型</a></em>
+                                            <em><a href="#">染发</a></em>
+                                            <em><a href="#">烫发</a></em>
+                                            <em><a href="#">假发</a></em>
+                                            <em><a href="#">美发工具</a></em>
+                                            <em><a href="#">洗护套装</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">口腔护理</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">牙膏</a></em>
+                                            <em><a href="#">牙粉</a></em>
+                                            <em><a href="#">牙贴</a></em>
+                                            <em><a href="#">牙刷</a></em>
+                                            <em><a href="#">牙线</a></em>
+                                            <em><a href="#">漱口水</a></em>
+                                            <em><a href="#">口喷</a></em>
+                                            <em><a href="#">假牙清洁</a></em>
+                                            <em><a href="#">套装</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">身体护理</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">花露水</a></em>
+                                            <em><a href="#">沐浴露</a></em>
+                                            <em><a href="#">香皂</a></em>
+                                            <em><a href="#">洗手液</a></em>
+                                            <em><a href="#">护手霜</a></em>
+                                            <em><a href="#">浴盐</a></em>
+                                            <em><a href="#">润肤</a></em>
+                                            <em><a href="#">精油</a></em>
+                                            <em><a href="#">美颈</a></em>
+                                            <em><a href="#">美胸</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3><a href="">女鞋/箱包/钟表/珠宝</a></h3>
+                            <div class="item-list clearfix" style="display: none;">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">时尚女鞋</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">新品推荐</a></em>
+                                            <em><a href="#">单鞋</a></em>
+                                            <em><a href="#">休闲鞋</a></em>
+                                            <em><a href="#">帆布鞋</a></em>
+                                            <em><a href="#">妈妈鞋</a></em>
+                                            <em><a href="#">布鞋/绣花鞋</a></em>
+                                            <em><a href="#">女靴</a></em>
+                                            <em><a href="#">踝靴</a></em>
+                                            <em><a href="#">马丁靴</a></em>
+                                            <em><a href="#">雪地靴</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">潮流女包</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">真皮包</a></em>
+                                            <em><a href="#">单肩包</a></em>
+                                            <em><a href="#">手提包</a></em>
+                                            <em><a href="#">斜挎包</a></em>
+                                            <em><a href="#">双肩包</a></em>
+                                            <em><a href="#">钱包</a></em>
+                                            <em><a href="#">手拿包</a></em>
+                                            <em><a href="#">卡包/零钱包</a></em>
+                                            <em><a href="#">钥匙包</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">精品男包</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">男士钱包</a></em>
+                                            <em><a href="#">双肩包</a></em>
+                                            <em><a href="#">单肩/斜挎包</a></em>
+                                            <em><a href="#">商务公文包</a></em>
+                                            <em><a href="#">男士手包</a></em>
+                                            <em><a href="#">卡包名片夹</a></em>
+                                            <em><a href="#">钥匙包</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">功能箱包</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">拉杆箱</a></em>
+                                            <em><a href="#">拉杆包</a></em>
+                                            <em><a href="#">旅行包</a></em>
+                                            <em><a href="#">电脑包</a></em>
+                                            <em><a href="#">休闲运动包</a></em>
+                                            <em><a href="#">书包</a></em>
+                                            <em><a href="#">登山包</a></em>
+                                            <em><a href="#">腰包/胸包</a></em>
+                                            <em><a href="#">旅行配件</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">奢侈品</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">箱包</a></em>
+                                            <em><a href="#">钱包</a></em>
+                                            <em><a href="#">服饰</a></em>
+                                            <em><a href="#">腰带</a></em>
+                                            <em><a href="#">鞋靴</a></em>
+                                            <em><a href="#">太阳镜/眼镜框</a></em>
+                                            <em><a href="#">饰品</a></em>
+                                            <em><a href="#">配件</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">奢侈品</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">GUCCI</a></em>
+                                            <em><a href="#">COACH</a></em>
+                                            <em><a href="#">雷朋</a></em>
+                                            <em><a href="#">施华洛世奇</a></em>
+                                            <em><a href="#">MK</a></em>
+                                            <em><a href="#">阿玛尼</a></em>
+                                            <em><a href="#">菲拉格慕</a></em>
+                                            <em><a href="#">VERSACE</a></em>
+                                            <em><a href="#">普拉达</a></em>
+                                            <em><a href="#">巴宝莉</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3><a href="">男鞋/运动/户外</a></h3>
+                            <div class="item-list clearfix" style="display: none;">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">流行男鞋</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">新品推荐</a></em>
+                                            <em><a href="#">休闲鞋</a></em>
+                                            <em><a href="#">商务休闲鞋</a></em>
+                                            <em><a href="#">正装鞋</a></em>
+                                            <em><a href="#">帆布鞋</a></em>
+                                            <em><a href="#">凉鞋</a></em>
+                                            <em><a href="#">拖鞋</a></em>
+                                            <em><a href="#">功能鞋</a></em>
+                                            <em><a href="#">增高鞋</a></em>
+                                            <em><a href="#">工装鞋</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">运动鞋包</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">跑步鞋</a></em>
+                                            <em><a href="#">休闲鞋</a></em>
+                                            <em><a href="#">篮球鞋</a></em>
+                                            <em><a href="#">帆布鞋</a></em>
+                                            <em><a href="#">板鞋</a></em>
+                                            <em><a href="#">拖鞋</a></em>
+                                            <em><a href="#">运动包</a></em>
+                                            <em><a href="#">足球鞋</a></em>
+                                            <em><a href="#">乒羽网鞋</a></em>
+                                            <em><a href="#">训练鞋</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">运动服饰</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">T恤</a></em>
+                                            <em><a href="#">运动套装</a></em>
+                                            <em><a href="#">运动裤</a></em>
+                                            <em><a href="#">卫衣/套头衫</a></em>
+                                            <em><a href="#">夹克/风衣</a></em>
+                                            <em><a href="#">羽绒服</a></em>
+                                            <em><a href="#">运动配饰</a></em>
+                                            <em><a href="#">棉服</a></em>
+                                            <em><a href="#">紧身衣</a></em>
+                                            <em><a href="#">运动背心</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">健身训练</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">跑步机</a></em>
+                                            <em><a href="#">动感单车</a></em>
+                                            <em><a href="#">健身车</a></em>
+                                            <em><a href="#">椭圆机</a></em>
+                                            <em><a href="#">综合训练器</a></em>
+                                            <em><a href="#">划船机</a></em>
+                                            <em><a href="#">甩脂机</a></em>
+                                            <em><a href="#">倒立机</a></em>
+                                            <em><a href="#">踏步机</a></em>
+                                            <em><a href="#">哑铃</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">骑行运动</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">山地车</a></em>
+                                            <em><a href="#">公路车</a></em>
+                                            <em><a href="#">折叠车</a></em>
+                                            <em><a href="#">骑行服</a></em>
+                                            <em><a href="#">电动车</a></em>
+                                            <em><a href="#">电动滑板车</a></em>
+                                            <em><a href="#">城市自行车</a></em>
+                                            <em><a href="#">平衡车</a></em>
+                                            <em><a href="#">穿戴装备</a></em>
+                                            <em><a href="#">自行车配件</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">体育用品</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">乒乓球</a></em>
+                                            <em><a href="#">羽毛球</a></em>
+                                            <em><a href="#">篮球</a></em>
+                                            <em><a href="#">足球</a></em>
+                                            <em><a href="#">轮滑滑板</a></em>
+                                            <em><a href="#">网球</a></em>
+                                            <em><a href="#">高尔夫</a></em>
+                                            <em><a href="#">台球</a></em>
+                                            <em><a href="#">排球</a></em>
+                                            <em><a href="#">棋牌麻将</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3><a href="">房产/汽车/汽车用品</a></h3>
+                            <div class="item-list clearfix" style="display: none;">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">房产</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">长租公寓</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">汽车车型</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">微型车</a></em>
+                                            <em><a href="#">小型车</a></em>
+                                            <em><a href="#">紧凑型车</a></em>
+                                            <em><a href="#">中型车</a></em>
+                                            <em><a href="#">中大型车</a></em>
+                                            <em><a href="#">豪华车</a></em>
+                                            <em><a href="#">MPV</a></em>
+                                            <em><a href="#">SUV</a></em>
+                                            <em><a href="#">跑车</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">汽车价格</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">5-8万</a></em>
+                                            <em><a href="#">8-12万</a></em>
+                                            <em><a href="#">12-18万</a></em>
+                                            <em><a href="#">18-25万</a></em>
+                                            <em><a href="#">25-40万</a></em>
+                                            <em><a href="#">40万以上</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">汽车品牌</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">大众</a></em>
+                                            <em><a href="#">日产</a></em>
+                                            <em><a href="#">丰田</a></em>
+                                            <em><a href="#">别克</a></em>
+                                            <em><a href="#">宝骏</a></em>
+                                            <em><a href="#">本田</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">维修保养</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">京东保养</a></em>
+                                            <em><a href="#">汽机油</a></em>
+                                            <em><a href="#">轮胎</a></em>
+                                            <em><a href="#">添加剂</a></em>
+                                            <em><a href="#">防冻液</a></em>
+                                            <em><a href="#">滤清器</a></em>
+                                            <em><a href="#">蓄电池</a></em>
+                                            <em><a href="#">变速箱油/滤</a></em>
+                                            <em><a href="#">雨刷</a></em>
+                                            <em><a href="#">刹车片/盘</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">汽车装饰</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">座垫座套</a></em>
+                                            <em><a href="#">脚垫</a></em>
+                                            <em><a href="#">头枕腰靠</a></em>
+                                            <em><a href="#">方向盘套</a></em>
+                                            <em><a href="#">后备箱垫</a></em>
+                                            <em><a href="#">车载支架</a></em>
+                                            <em><a href="#">车钥匙扣</a></em>
+                                            <em><a href="#">香水</a></em>
+                                            <em><a href="#">炭包/净化剂</a></em>
+                                            <em><a href="#">扶手箱</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3><a href="">母婴/玩具乐器</a></h3>
+                            <div class="item-list clearfix">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">奶粉</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">1段</a></em>
+                                            <em><a href="#">2段</a></em>
+                                            <em><a href="#">3段</a></em>
+                                            <em><a href="#">4段</a></em>
+                                            <em><a href="#">孕妈奶粉</a></em>
+                                            <em><a href="#">特殊配方奶粉</a></em>
+                                            <em><a href="#">有机奶粉</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">营养辅食</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">米粉/菜粉</a></em>
+                                            <em><a href="#">面条/粥</a></em>
+                                            <em><a href="#">果泥/果汁</a></em>
+                                            <em><a href="#">益生菌/初乳</a></em>
+                                            <em><a href="#">DHA</a></em>
+                                            <em><a href="#">钙铁锌/维生素</a></em>
+                                            <em><a href="#">清火/开胃</a></em>
+                                            <em><a href="#">宝宝零食</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">尿裤湿巾</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">NB</a></em>
+                                            <em><a href="#">S</a></em>
+                                            <em><a href="#">M</a></em>
+                                            <em><a href="#">L</a></em>
+                                            <em><a href="#">XL</a></em>
+                                            <em><a href="#">XXL</a></em>
+                                            <em><a href="#">拉拉裤</a></em>
+                                            <em><a href="#">成人尿裤</a></em>
+                                            <em><a href="#">婴儿湿巾</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">喂养用品</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">奶瓶奶嘴</a></em>
+                                            <em><a href="#">吸奶器</a></em>
+                                            <em><a href="#">暖奶消毒</a></em>
+                                            <em><a href="#">辅食料理机</a></em>
+                                            <em><a href="#">牙胶安抚</a></em>
+                                            <em><a href="#">食物存储</a></em>
+                                            <em><a href="#">儿童餐具</a></em>
+                                            <em><a href="#">水壶/水杯</a></em>
+                                            <em><a href="#">围兜/防溅衣</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">洗护用品</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">宝宝护肤</a></em>
+                                            <em><a href="#">日常护理</a></em>
+                                            <em><a href="#">洗发沐浴</a></em>
+                                            <em><a href="#">洗澡用具</a></em>
+                                            <em><a href="#">洗衣液/皂</a></em>
+                                            <em><a href="#">理发器</a></em>
+                                            <em><a href="#">婴儿口腔清洁</a></em>
+                                            <em><a href="#">座便器</a></em>
+                                            <em><a href="#">驱蚊防晒</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">寝居服饰</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">睡袋/抱被</a></em>
+                                            <em><a href="#">婴儿枕</a></em>
+                                            <em><a href="#">毛毯棉被</a></em>
+                                            <em><a href="#">婴童床品</a></em>
+                                            <em><a href="#">浴巾/浴衣</a></em>
+                                            <em><a href="#">毛巾/口水巾</a></em>
+                                            <em><a href="#">婴儿礼盒</a></em>
+                                            <em><a href="#">婴儿内衣</a></em>
+                                            <em><a href="#">婴儿外出服</a></em>
+                                            <em><a href="#">隔尿垫巾</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3><a href="">食品/酒类/生鲜/特产</a></h3>
+                            <div class="item-list clearfix">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">新鲜水果</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">苹果</a></em>
+                                            <em><a href="#">橙子</a></em>
+                                            <em><a href="#">奇异果/猕猴桃</a></em>
+                                            <em><a href="#">火龙果</a></em>
+                                            <em><a href="#">榴莲</a></em>
+                                            <em><a href="#">芒果</a></em>
+                                            <em><a href="#">椰子</a></em>
+                                            <em><a href="#">车厘子</a></em>
+                                            <em><a href="#">百香果</a></em>
+                                            <em><a href="#">柚子</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">蔬菜蛋品</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">蛋品</a></em>
+                                            <em><a href="#">叶菜类</a></em>
+                                            <em><a href="#">根茎类</a></em>
+                                            <em><a href="#">葱姜蒜椒</a></em>
+                                            <em><a href="#">鲜菌菇</a></em>
+                                            <em><a href="#">茄果瓜类</a></em>
+                                            <em><a href="#">半加工蔬菜</a></em>
+                                            <em><a href="#">半加工豆制品</a></em>
+                                            <em><a href="#">玉米</a></em>
+                                            <em><a href="#">山药</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">精选肉类</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">猪肉</a></em>
+                                            <em><a href="#">牛肉</a></em>
+                                            <em><a href="#">羊肉</a></em>
+                                            <em><a href="#">鸡肉</a></em>
+                                            <em><a href="#">鸭肉</a></em>
+                                            <em><a href="#">冷鲜肉</a></em>
+                                            <em><a href="#">特色肉类</a></em>
+                                            <em><a href="#">内脏类</a></em>
+                                            <em><a href="#">冷藏熟食</a></em>
+                                            <em><a href="#">牛排</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">海鲜水产</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">鱼类</a></em>
+                                            <em><a href="#">虾类</a></em>
+                                            <em><a href="#">蟹类</a></em>
+                                            <em><a href="#">贝类</a></em>
+                                            <em><a href="#">海参</a></em>
+                                            <em><a href="#">鱿鱼/章鱼</a></em>
+                                            <em><a href="#">活鲜</a></em>
+                                            <em><a href="#">三文鱼</a></em>
+                                            <em><a href="#">大闸蟹</a></em>
+                                            <em><a href="#">小龙虾</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">冷饮冻食</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">水饺/馄饨</a></em>
+                                            <em><a href="#">汤圆/元宵</a></em>
+                                            <em><a href="#">面点</a></em>
+                                            <em><a href="#">烘焙半成品</a></em>
+                                            <em><a href="#">奶酪/黄油</a></em>
+                                            <em><a href="#">方便速食</a></em>
+                                            <em><a href="#">火锅丸串</a></em>
+                                            <em><a href="#">冰淇淋</a></em>
+                                            <em><a href="#">冷藏饮料</a></em>
+                                            <em><a href="#">低温奶</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">中外名酒</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">白酒</a></em>
+                                            <em><a href="#">葡萄酒</a></em>
+                                            <em><a href="#">洋酒</a></em>
+                                            <em><a href="#">啤酒</a></em>
+                                            <em><a href="#">黄酒/养生酒</a></em>
+                                            <em><a href="#">收藏酒/陈年老酒</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3><a href="">艺术/礼品鲜花/农资绿植</a></h3>
+                            <div class="item-list clearfix" style="display: none;">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">艺术品</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">火机烟具</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">电子烟</a></em>
+                                            <em><a href="#">换弹型电子烟</a></em>
+                                            <em><a href="#">烟油</a></em>
+                                            <em><a href="#">打火机</a></em>
+                                            <em><a href="#">一次性打火机</a></em>
+                                            <em><a href="#">烟嘴</a></em>
+                                            <em><a href="#">烟盒</a></em>
+                                            <em><a href="#">烟斗</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">礼品</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">创意礼品</a></em>
+                                            <em><a href="#">电子礼品</a></em>
+                                            <em><a href="#">工艺礼品</a></em>
+                                            <em><a href="#">美妆礼品</a></em>
+                                            <em><a href="#">婚庆节庆</a></em>
+                                            <em><a href="#">礼盒礼券</a></em>
+                                            <em><a href="#">礼品定制</a></em>
+                                            <em><a href="#">军刀军具</a></em>
+                                            <em><a href="#">古董文玩</a></em>
+                                            <em><a href="#">收藏品</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">鲜花速递</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">鲜花</a></em>
+                                            <em><a href="#">每周一花</a></em>
+                                            <em><a href="#">永生花</a></em>
+                                            <em><a href="#">香皂花</a></em>
+                                            <em><a href="#">卡通花束</a></em>
+                                            <em><a href="#">干花</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">绿植园艺</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">桌面绿植</a></em>
+                                            <em><a href="#">苗木</a></em>
+                                            <em><a href="#">绿植盆栽</a></em>
+                                            <em><a href="#">多肉植物</a></em>
+                                            <em><a href="#">花卉</a></em>
+                                            <em><a href="#">种子种球</a></em>
+                                            <em><a href="#">花盆花器</a></em>
+                                            <em><a href="#">园艺土肥</a></em>
+                                            <em><a href="#">园艺工具</a></em>
+                                            <em><a href="#">园林机械</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">种子</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">花草林木类</a></em>
+                                            <em><a href="#">蔬菜/菌类</a></em>
+                                            <em><a href="#">瓜果类</a></em>
+                                            <em><a href="#">大田作物类</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3><a href="">医药保健/计生情趣</a></h3>
+                            <div class="item-list clearfix">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">中西药品</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">感冒咳嗽</a></em>
+                                            <em><a href="#">补肾壮阳</a></em>
+                                            <em><a href="#">补气养血</a></em>
+                                            <em><a href="#">止痛镇痛</a></em>
+                                            <em><a href="#">耳鼻喉用药</a></em>
+                                            <em><a href="#">眼科用药</a></em>
+                                            <em><a href="#">口腔用药</a></em>
+                                            <em><a href="#">皮肤用药</a></em>
+                                            <em><a href="#">肠胃消化</a></em>
+                                            <em><a href="#">风湿骨外伤</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">营养健康</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">增强免疫</a></em>
+                                            <em><a href="#">骨骼健康</a></em>
+                                            <em><a href="#">补肾强身</a></em>
+                                            <em><a href="#">肠胃养护</a></em>
+                                            <em><a href="#">调节三高</a></em>
+                                            <em><a href="#">缓解疲劳</a></em>
+                                            <em><a href="#">养肝护肝</a></em>
+                                            <em><a href="#">改善贫血</a></em>
+                                            <em><a href="#">清咽利喉</a></em>
+                                            <em><a href="#">美容养颜</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">营养成分</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">维生素/矿物质</a></em>
+                                            <em><a href="#">胶原蛋白</a></em>
+                                            <em><a href="#">益生菌</a></em>
+                                            <em><a href="#">蛋白粉</a></em>
+                                            <em><a href="#">玛咖</a></em>
+                                            <em><a href="#">酵素</a></em>
+                                            <em><a href="#">膳食纤维</a></em>
+                                            <em><a href="#">叶酸</a></em>
+                                            <em><a href="#">番茄红素</a></em>
+                                            <em><a href="#">左旋肉碱</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">滋补养生</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">阿胶</a></em>
+                                            <em><a href="#">蜂蜜/蜂产品</a></em>
+                                            <em><a href="#">枸杞</a></em>
+                                            <em><a href="#">燕窝</a></em>
+                                            <em><a href="#">冬虫夏草</a></em>
+                                            <em><a href="#">人参/西洋参</a></em>
+                                            <em><a href="#">三七</a></em>
+                                            <em><a href="#">鹿茸</a></em>
+                                            <em><a href="#">雪蛤</a></em>
+                                            <em><a href="#">青钱柳</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">计生情趣</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">避孕套</a></em>
+                                            <em><a href="#">排卵验孕</a></em>
+                                            <em><a href="#">润滑液</a></em>
+                                            <em><a href="#">男用延时</a></em>
+                                            <em><a href="#">飞机杯</a></em>
+                                            <em><a href="#">倒模</a></em>
+                                            <em><a href="#">仿真娃娃</a></em>
+                                            <em><a href="#">震动棒</a></em>
+                                            <em><a href="#">跳蛋</a></em>
+                                            <em><a href="#">仿真阳具</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">保健器械</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">血压计</a></em>
+                                            <em><a href="#">血糖仪</a></em>
+                                            <em><a href="#">心电仪</a></em>
+                                            <em><a href="#">体温计</a></em>
+                                            <em><a href="#">胎心仪</a></em>
+                                            <em><a href="#">制氧机</a></em>
+                                            <em><a href="#">呼吸机</a></em>
+                                            <em><a href="#">雾化器</a></em>
+                                            <em><a href="#">助听器</a></em>
+                                            <em><a href="#">轮椅</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3><a href="">图书/文娱/电子书</a></h3>
+                            <div class="item-list clearfix">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">文学</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">散文随笔</a></em>
+                                            <em><a href="#">悬疑推理</a></em>
+                                            <em><a href="#">科幻</a></em>
+                                            <em><a href="#">武侠</a></em>
+                                            <em><a href="#">世界名著</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">童书</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">儿童文学</a></em>
+                                            <em><a href="#">绘本</a></em>
+                                            <em><a href="#">科普百科</a></em>
+                                            <em><a href="#">幼儿启蒙</a></em>
+                                            <em><a href="#">智力开发</a></em>
+                                            <em><a href="#">少儿英语</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">教材教辅</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">课外读物</a></em>
+                                            <em><a href="#">英语四六级</a></em>
+                                            <em><a href="#">会计类考试</a></em>
+                                            <em><a href="#">国家公务员</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">人文社科</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">经管励志</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">市场营销</a></em>
+                                            <em><a href="#">领导力</a></em>
+                                            <em><a href="#">股票</a></em>
+                                            <em><a href="#">投资</a></em>
+                                            <em><a href="#">自我完善</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">艺术</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">绘画</a></em>
+                                            <em><a href="#">音乐</a></em>
+                                            <em><a href="#">书法</a></em>
+                                            <em><a href="#">连环画</a></em>
+                                            <em><a href="#">设计</a></em>
+                                            <em><a href="#">建筑艺术</a></em>
+                                            <em><a href="#">艺术史</a></em>
+                                            <em><a href="#">影视</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h3><a href="">机票/酒店/旅游/生活</a></h3>
+                            <div class="item-list clearfix">
+                                <div class="subitem">
+                                    <!--  二级导航-->
+                                    <dl class="fore1">
+                                        <dt><a href="">交通出行</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">机场服务</a></em>
+                                            <em><a href="#">机票套餐</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">酒店预订</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">酒店套餐</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">旅游度假</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">定制旅游</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">团队建设</a></em>
+                                            <em><a href="#">奖励旅游</a></em>
+                                            <em><a href="#">会议周边</a></em>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">演出票务</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore1">
+                                        <dt><a href="">生活缴费</a></dt>
+                                        <dd>
+                                            <!-- 三级导航-->
+                                            <em><a href="#">城市通</a></em>
+                                            <em><a href="#">燃气</a></em>
+                                        </dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <ul class="navitems">
@@ -114,10 +1523,41 @@
         <div class="main">
             <div class="focus">
                 <!-- 轮播图的制作方式 -->
-                <ul>
-                    <li><img src="./upload/focus1.png" alt="focus"></li>
-                </ul>
+                <!-- <ul>
+                    <li><img src="./upload/focus0.png" alt="focus"></li>
+                    <li><img src="./upload/focus1.jpg" alt="focus"></li>
+                    <li><img src="./upload/focus2.jpg" alt="focus"></li>
+                    <li><img src="./upload/focus3.jpg" alt="focus"></li>
+                </ul> -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- <div class="swiper-slide">
+                            <img src="upload/focus0.png" alt="">
+                        </div> -->
+                        <div class="swiper-slide">
+                            <a href="./detail.html"><img src="images/detail.png" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="./detail.html"><img src="upload/focus0.png" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="./detail.html"><img src="upload/focus1.jpg" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="./detail.html"><img src="upload/focus2.jpg" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="./detail.html"><img src="upload/focus3.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
+
+
             <div class="newsflash">
                 <div class="news">
                     <dl>
@@ -161,16 +1601,16 @@
         <div class="recom_bd">
             <ul>
                 <li>
-                    <a href="#"><img src="./upload/recom_03.jpg" alt=""></a>
+                    <a href="#"><img src="./upload/today01.png" alt=""></a>
                 </li>
                 <li>
-                    <a href="#"><img src="./upload/recom_03.jpg" alt=""></a>
+                    <a href="#"><img src="./upload/today02.png" alt=""></a>
                 </li>
                 <li>
-                    <a href="#"><img src="./upload/recom_03.jpg" alt=""></a>
+                    <a href="#"><img src="./upload/today03.png" alt=""></a>
                 </li>
                 <li>
-                    <a href="#"><img src="./upload/recom_03.jpg" alt=""></a>
+                    <a href="#"><img src="./upload/today04.png" alt=""></a>
                 </li>
             </ul>
         </div>
@@ -239,7 +1679,7 @@
     <!-- 分类楼层模块 点击类别到不同的楼层 -->
     <div class="floor w">
         <ul>
-            <li class="appliance">
+            <li class="content-block">
                 <div class="floor_hd">
                     <h5>家用电器</h5>
                     <div class="tab_list">
@@ -271,7 +1711,7 @@
                                     <img src="./upload/floor-1-1.png" alt="">
                                 </ul>
                             </div>
-                            <div><a href="#"><img src="./upload/floor-1-b01.png" alt=""></a></div>
+                            <div><a href="#"><img src="./upload/floor-1-b02.png" alt=""></a></div>
                             <div>
                                 <a href="#" class="bb"><img src="./upload/floor-1-2.png" alt=""></a>
                                 <a href="#"><img src="./upload/floor-1-3.png" alt=""></a>
@@ -290,7 +1730,7 @@
                 </div>
             </li>
 
-            <li class="phone">
+            <li class="content-block">
                 <div class="floor_hd">
                     <h5>手机通讯</h5>
                     <div class="tab_list">
@@ -340,9 +1780,159 @@
 
                 </div>
             </li>
-            <li class="computer">
+            <li class="content-block">
                 <div class="floor_hd">
-                    <h5>家用电器</h5>
+                    <h5>服饰搭配</h5>
+                    <div class="tab_list">
+                        <ul>
+                            <li><a href="#">热门</a><i>|</i></li>
+                            <li><a href="#">电脑/平板</a><i>|</i></li>
+                            <li><a href="#">潮流影音</a><i>|</i></li>
+                            <li><a href="#">智能外设</a><i>|</i></li>
+                            <li><a href="#">DIY硬件</a><i>|</i></li>
+                            <li><a href="#">电竞游戏</a><i>|</i></li>
+                            <li><a href="#">办公/网络</a><i>|</i></li>
+                            <li><a href="#">文具电教</a><i>|</i></li>
+                            <li><a href="#">精选配件</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="floor_bd">
+                    <div class="tab_content">
+                        <!-- 内容1 -->
+                        <div class="tab_list_item clearfix">
+                            <div>
+                                <ul>
+                                    <li><a href="#">SSD硬盘</a></li>
+                                    <li><a href="#">显示器</a></li>
+                                    <li><a href="#">机械键盘</a></li>
+                                    <li><a href="#">台式机</a></li>
+                                    <li><a href="#">组装电脑</a></li>
+                                    <li><a href="#">配件专区</a></li>
+                                    <img src="./upload/floor-1-1.png" alt="">
+                                </ul>
+                            </div>
+                            <div><a href="#"><img src="./upload/floor-1-b01.png" alt=""></a></div>
+                            <div>
+                                <a href="#" class="bb"><img src="./upload/floor-1-2.png" alt=""></a>
+                                <a href="#"><img src="./upload/floor-1-3.png" alt=""></a>
+                            </div>
+                            <div><a href="#"><img src="./upload/floor-1-4.png" alt=""></a></div>
+                            <div>
+                                <a href="#" class="bb"><img src="./upload/floor-1-5.png" alt=""></a>
+                                <a href="#"><img src="./upload/floor-1-6.png" alt=""></a>
+                            </div>
+                        </div>
+                        <!-- 内容2 -->
+                        <!-- 内容3 -->
+                        <!-- 内容4 -->
+                    </div>
+
+                </div>
+            </li>
+            <li class="content-block">
+                <div class="floor_hd">
+                    <h5>电脑办公</h5>
+                    <div class="tab_list">
+                        <ul>
+                            <li><a href="#">热门</a><i>|</i></li>
+                            <li><a href="#">电脑/平板</a><i>|</i></li>
+                            <li><a href="#">潮流影音</a><i>|</i></li>
+                            <li><a href="#">智能外设</a><i>|</i></li>
+                            <li><a href="#">DIY硬件</a><i>|</i></li>
+                            <li><a href="#">电竞游戏</a><i>|</i></li>
+                            <li><a href="#">办公/网络</a><i>|</i></li>
+                            <li><a href="#">文具电教</a><i>|</i></li>
+                            <li><a href="#">精选配件</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="floor_bd">
+                    <div class="tab_content">
+                        <!-- 内容1 -->
+                        <div class="tab_list_item clearfix">
+                            <div>
+                                <ul>
+                                    <li><a href="#">SSD硬盘</a></li>
+                                    <li><a href="#">显示器</a></li>
+                                    <li><a href="#">机械键盘</a></li>
+                                    <li><a href="#">台式机</a></li>
+                                    <li><a href="#">组装电脑</a></li>
+                                    <li><a href="#">配件专区</a></li>
+                                    <img src="./upload/floor-1-1.png" alt="">
+                                </ul>
+                            </div>
+                            <div><a href="#"><img src="./upload/floor-1-b01.png" alt=""></a></div>
+                            <div>
+                                <a href="#" class="bb"><img src="./upload/floor-1-2.png" alt=""></a>
+                                <a href="#"><img src="./upload/floor-1-3.png" alt=""></a>
+                            </div>
+                            <div><a href="#"><img src="./upload/floor-1-4.png" alt=""></a></div>
+                            <div>
+                                <a href="#" class="bb"><img src="./upload/floor-1-5.png" alt=""></a>
+                                <a href="#"><img src="./upload/floor-1-6.png" alt=""></a>
+                            </div>
+                        </div>
+                        <!-- 内容2 -->
+                        <!-- 内容3 -->
+                        <!-- 内容4 -->
+                    </div>
+
+                </div>
+            </li>
+            <li class="content-block">
+                <div class="floor_hd">
+                    <h5>医药保健</h5>
+                    <div class="tab_list">
+                        <ul>
+                            <li><a href="#">热门</a><i>|</i></li>
+                            <li><a href="#">电脑/平板</a><i>|</i></li>
+                            <li><a href="#">潮流影音</a><i>|</i></li>
+                            <li><a href="#">智能外设</a><i>|</i></li>
+                            <li><a href="#">DIY硬件</a><i>|</i></li>
+                            <li><a href="#">电竞游戏</a><i>|</i></li>
+                            <li><a href="#">办公/网络</a><i>|</i></li>
+                            <li><a href="#">文具电教</a><i>|</i></li>
+                            <li><a href="#">精选配件</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="floor_bd">
+                    <div class="tab_content">
+                        <!-- 内容1 -->
+                        <div class="tab_list_item clearfix">
+                            <div>
+                                <ul>
+                                    <li><a href="#">SSD硬盘</a></li>
+                                    <li><a href="#">显示器</a></li>
+                                    <li><a href="#">机械键盘</a></li>
+                                    <li><a href="#">台式机</a></li>
+                                    <li><a href="#">组装电脑</a></li>
+                                    <li><a href="#">配件专区</a></li>
+                                    <img src="./upload/floor-1-1.png" alt="">
+                                </ul>
+                            </div>
+                            <div><a href="#"><img src="./upload/floor-1-b01.png" alt=""></a></div>
+                            <div>
+                                <a href="#" class="bb"><img src="./upload/floor-1-2.png" alt=""></a>
+                                <a href="#"><img src="./upload/floor-1-3.png" alt=""></a>
+                            </div>
+                            <div><a href="#"><img src="./upload/floor-1-4.png" alt=""></a></div>
+                            <div>
+                                <a href="#" class="bb"><img src="./upload/floor-1-5.png" alt=""></a>
+                                <a href="#"><img src="./upload/floor-1-6.png" alt=""></a>
+                            </div>
+                        </div>
+                        <!-- 内容2 -->
+                        <!-- 内容3 -->
+                        <!-- 内容4 -->
+                    </div>
+
+                </div>
+            </li>
+            <li class="content-block">
+                <div class="floor_hd">
+                    <h5>图书影像</h5>
                     <div class="tab_list">
                         <ul>
                             <li><a href="#">热门</a><i>|</i></li>
@@ -492,18 +2082,7 @@
             </div>
         </div>
     </div>
-    <script>
-        var search = document.querySelector('.search')
-        //这里用keydown并不合适，因为按下很快，光标定位到input表单后，输入s
-        //为什么不试试用keyup？
-        document.addEventListener('keyup', function (e) {
-            var k = e.keyCode;
-            console.log(k);
-            if (k == 83) {
-                search.firstElementChild.focus();
-            }
-        })
-    </script>
+
 </body>
 
 </html>

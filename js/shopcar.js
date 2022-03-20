@@ -8,9 +8,11 @@ $(function () {
     $('[name="allChecked"]').change(function () {
         $('[type="checkbox"]').prop("checked", $(this).prop("checked"));
         getSum();
-        // if ($(this).prop("checked")) {
-        $('.shop-content').toggleClass('check_gbc');
-        // }
+        if ($(this).prop("checked")) {
+            $('.shop-content').addClass('check_bgc');
+        } else {
+            $('.shop-content').removeClass('check_bgc');
+        }
     })
     //(2).单选商品件数导致全选按钮
     // console.log($('.shop-content input').length); //商品件数 5
@@ -22,6 +24,11 @@ $(function () {
             $('[name="allChecked"]').prop('checked', false);
         }
         getSum();
+        if ($(this).prop('checked')) {
+            $(this).parents('.shop-content').addClass('check_bgc');
+        } else {
+            $(this).parents('.shop-content').removeClass('check_bgc');
+        }
     })
     //(3). 店铺全选 按钮
     $('.shop-tit input').change(function () {
@@ -34,14 +41,19 @@ $(function () {
         // 2. 店铺勾选 导致内部商品勾选
         $(this).parents('.shop').find('.shop-content input').prop('checked', $(this).prop('checked'));
         getSum();
-
+        if ($(this).prop('checked')) {
+            $(this).parents('.shop').find('.shop-content').addClass('check_bgc');
+        } else {
+            $(this).parents('.shop').find('.shop-content').removeClass('check_bgc');
+        }
     })
     //(4) 店铺商品勾选 导致店铺全选勾选
-    $('.shop-content input').change(function () {
+    $('.shop-content [type="checkbox"]').change(function () {
         // 如何找到同一个店铺的所有复选框 从this出发找到包裹整个店铺的box，再找到对应的 复选框
-        console.log($(this).parents('.shop').find('.shop-content input'));
-        var amount = $(this).parents('.shop').find('.shop-content input').length;
+        // console.log($(this).parents('.shop').find('[type="checkbox"]'));
+        let amount = $(this).parents('.shop').find('[type="checkbox"]').length - 1;
         var checked = $(this).parents('.shop').find('.shop-content input:checked').length;
+
         if (amount == checked) {
             $(this).parents('.shop').find('.shop-tit input').prop('checked', true);
         } else {
@@ -112,7 +124,7 @@ $(function () {
 
         // 2. 总件数
         $('.btn-box .number input').each(function (i, dom) {
-            console.log($(this).val());
+            // console.log($(this).val());
             let checked = $(this).parents('.con-2').prev('.con-1').find('input').prop('checked');
             if (checked) {
                 sum_amount += parseInt($(this).val());

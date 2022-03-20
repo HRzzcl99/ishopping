@@ -27,32 +27,36 @@
         <div class="registerarea">
             <div class="header">
                 <h5>注册新用户</h5>
-                <p>我有账号，去<a href="#" class="style_red">登陆</a></p>
+                <p style="font-size: 14px;">我有账号，去 <a href="#" class="style_red">登录</a></p>
             </div>
             <div class="reg_form">
                 <form action="">
                     <ul>
                         <li>
                             <label for="tel">手机号：</label>
-                            <input type="tel" class="inp">
+                            <input type="tel" class="inp" id="tel">
                             <span class="error"><i class="error_icon"></i>手机号码格式不正确，请重新输入</span>
+                            <span class="right" style="display: none;"><i class="right_icon"></i></span>
                         </li>
                         <li>
                             <label for="code">短信验证码：</label>
-                            <input type="text" class="inp">
-                            <span class="right"><i class="right_icon"></i>短信验证码输入正确</span>
+                            <input type="text" class="inp" id="code">
+                            <span class="error"><i class="error_icon"></i>短信验证码输入错误</span>
+                            <span class="right" style="display: none;"><i class="right_icon"></i>短信验证码输入正确</span>
                         </li>
                         <li>
                             <label for="pwd">登录密码：</label>
-                            <input type="password" class="inp">
+                            <input type="password" class="inp" id="pwd">
                             <span class="error"><i class="error_icon"></i>密码不少于6位数，请重新输入</span>
+                            <span class="right" style="display: none;"><i class="right_icon"></i>密码设置成功</span>
                         </li>
                         <li class="safe">
                             安全程度<em>弱</em><em>中</em><em>强</em>
                         </li>
                         <li><label for="confirm">确认密码：</label>
-                            <input type="password" class="inp">
+                            <input type="password" class="inp" id="confirm">
                             <span class="error"><i class="error_icon"></i>密码不一致，请重新输入</span>
+                            <span class="right" style="display: none;"><i class="right_icon"></i>密码一致</span>
                         </li>
                         <li class="agree">
                             <input type="checkbox" class="check">
@@ -81,8 +85,8 @@
                 <li><a href="#">Contact U</a></li>
             </div>
             <p class="copyright">
-                地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100
-                邮箱: zhanghj+itcast.cn<br>
+                地址: 广东省广州市天河区华南理工大学五山校区 邮编：100096 电话：400-618-4000 传真：010-82935100
+                邮箱: 995674078@qq.com<br>
                 京ICP备08001421号京公网安备110108007702
             </p>
         </footer>

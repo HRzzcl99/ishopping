@@ -32,22 +32,31 @@
     <div class="log_middle">
         <div class="log_body">
             <ul>
-                <li class="mode"><a href="#">扫描登录</a><i>|</i><a href="#">账户登录</a></li>
-                <li class="notice">公共场所不建议自动登录，以免账号丢失</li>
-                <form action="log.php">
-                    <li class="account"><i></i><input type="text" placeholder="邮箱/用户/手机号"></li>
-                    <li class="pwd"><i></i><input type="password" placeholder="请输入密码"></li>
-                    <li class="auto">
-                        <input type="checkbox" id="auto_login">
-                        <label for="auto_login">自动登录</label>
-                        <a href="#">忘记密码？</a>
-                    </li>
-                    <li class="btn"><button>登录</button></li>
-                </form>
+                <li class="mode"><a href="#">扫描登录</a><i>|</i><a href="#" class="current">账户登录</a></li>
+                <li class="scan_body">
+                    <img src="images/scan.jpg" alt="其实这是我的微信公众号">
+                </li>
+                <li class="account_body">
+                    <p class="notice">公共场所不建议自动登录，以免账号丢失</p>
+                    <form action="log.php">
+                        <ul>
+                            <li class="account"><i></i><input type="text" placeholder="邮箱/用户/手机号"></li>
+                            <li class="pwd"><i></i><input type="password" placeholder="请输入密码"></li>
+                            <li class="auto">
+                                <input type="checkbox" id="auto_login">
+                                <label for="auto_login">自动登录</label>
+                                <a href="#">忘记密码？</a>
+                            </li>
+                            <li class="btn"><button>登录</button></li>
+                        </ul>
+                    </form>
+                </li>
+
                 <li class="icons">
                     <img src="./upload/log_03.png" alt="">
                     <em>立即注册</em>
                 </li>
+            </ul>
         </div>
     </div>
     <!-- 底部模块footer -->
@@ -76,4 +85,22 @@
             </div>
         </div>
     </div>
+    <script>
+        var mode = document.querySelectorAll('.mode a');
+        var scan_body = document.querySelector('.scan_body');
+        var account_body = document.querySelector('.account_body');
+        console.log(mode);
+        mode[0].addEventListener('mouseenter', function () {
+            this.className = 'current';
+            scan_body.style.display = 'block';
+            account_body.style.display = 'none';
+            mode[1].className = '';
+        })
+        mode[1].addEventListener('mouseenter', function () {
+            this.className = 'current';
+            scan_body.style.display = 'none';
+            account_body.style.display = 'block';
+            mode[0].className = '';
+        })
+    </script>
 </body>
