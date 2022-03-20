@@ -8,6 +8,11 @@ $(function () {
     //         search.firstElementChild.focus();
     //     }
     // })
+    alert(
+        "项目包含页面: \n index.html 电商网站主页\n list.html 商品详情页 (点击轮播图跳转)\n login.html 用户登录页面\n shopcar.html 购物车页面\n submit.html 订单提交页面"
+    )
+    alert(" 每个页面实现基础交互功能: \n轮播图 \n商品放大镜效果 \n电梯导航栏 \n下拉菜单tab栏切换 ")
+    alert(" 制作人:黄容\n 指导老师:pink \n 技术栈: html + css + jQuery")
 
     //轮播图模块
     var swiper = new Swiper(".mySwiper", {
