@@ -1,5 +1,7 @@
 # ishopping
 
+打开网址： https://hrzzcl99.github.io/ishopping/
+ 
 项目包含页面:<br>
 1. index.html  电商网站主页<br>
 2. list.html   商品详情页 (点击轮播图跳转)<br>
