@@ -1,6 +1,9 @@
 # ishopping
 
-打开网址： https://hrzzcl99.github.io/ishopping/
+
+项目负责人: huangrong<br>
+指导老师pink<br>
+项目地址： https://hrzzcl99.github.io/ishopping/
  
 项目包含页面:<br>
 1. index.html  电商网站主页<br>
@@ -25,5 +28,3 @@
 5. 用户注册和登录匹配
 6. 密码明文显示切换
 
-项目负责人: huangrong<br>
-指导老师pink<br>
