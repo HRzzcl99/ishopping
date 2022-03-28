@@ -2,8 +2,8 @@
 
 
 项目负责人: huangrong<br>
-指导老师pink<br>
-项目地址： https://hrzzcl99.github.io/ishopping/
+指导老师：  pink<br>
+项目地址：  https://hrzzcl99.github.io/ishopping/
  
 项目包含页面:<br>
 1. index.html  电商网站主页<br>
