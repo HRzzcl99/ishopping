@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/base.css">
     <!-- 引入自己的用户注册界面 -->
     <link rel="stylesheet" href="./css/register.css">
+    <script src="./js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -30,38 +31,45 @@
                 <p style="font-size: 14px;">我有账号，去 <a href="login.html" class="style_red">登录</a></p>
             </div>
             <div class="reg_form">
-                <form action="">
+                <form action="login.html" name="register_form" id="register_form">
                     <ul>
                         <li>
                             <label for="tel">手机号：</label>
-                            <input type="tel" class="inp" id="tel">
-                            <span class="error"><i class="error_icon"></i>手机号码格式不正确，请重新输入</span>
-                            <span class="right" style="display: none;"><i class="right_icon"></i></span>
+                            <input type="tel" class="inp" id="tel" name="tel">
+                            <span class="tel_hint">请输入11位手机号码</span>
+                            <span class="display tel_error"><i class=" error_icon"></i
+                                    class="error">手机号码格式不正确，请重新输入</span>
+                            <span class="display tel_right"><i class="right_icon"></i></span>
                         </li>
-                        <li>
+                        <li class="msg_code">
                             <label for="code">短信验证码：</label>
                             <input type="text" class="inp" id="code">
-                            <span class="error"><i class="error_icon"></i>短信验证码输入错误</span>
-                            <span class="right" style="display: none;"><i class="right_icon"></i>短信验证码输入正确</span>
+                            <button class="auth_code">获取短信验证码</button>
+                            <span class="display code_error"><i class="error_icon"></i class="error">短信验证码输入错误</span>
+                            <span class="display code_right"><i class="right_icon"></i>短信验证码输入正确</span>
                         </li>
                         <li>
                             <label for="pwd">登录密码：</label>
-                            <input type="password" class="inp" id="pwd">
-                            <span class="error"><i class="error_icon"></i>密码不少于6位数，请重新输入</span>
-                            <span class="right" style="display: none;"><i class="right_icon"></i>密码设置成功</span>
+                            <input type="password" class="inp" id="pwd" name="password">
+                            <span class="pwd_hint">请设置6至20位字母、数字和符号组合</span>
+                            <span class="display pwd_error"><i class="error_icon"></i class="error">密码不符合，请重新输入</span>
+                            <span class="display pwd_right"><i class="right_icon"></i>密码设置成功</span>
                         </li>
                         <li class="safe">
                             安全程度<em>弱</em><em>中</em><em>强</em>
                         </li>
                         <li><label for="confirm">确认密码：</label>
                             <input type="password" class="inp" id="confirm">
-                            <span class="error"><i class="error_icon"></i>密码不一致，请重新输入</span>
-                            <span class="right" style="display: none;"><i class="right_icon"></i>密码一致</span>
+                            <span class="display confirm_error"><i class="error_icon"></i
+                                    class="error">密码不一致，请重新输入</span>
+                            <span class="display confirm_right"><i class="right_icon"></i>密码一致</span>
                         </li>
                         <li class="agree">
                             <input type="checkbox" class="check">
                             同意协议并注册
                             <a href="#">《知晓用户协议》</a>
+                            <span class="display check_error"><i class="error_icon"></i class="error">请勾选用户协议</span>
+
                         </li>
                         <li><button class="btn">完成注册</button></li>
                     </ul>
@@ -91,6 +99,121 @@
             </p>
         </footer>
     </div>
+    <script>
+        $(function () {
+            $('#tel').change(verifyTel);
+
+            function verifyTel() {
+                var tel = /^1(3\d|4[5-9]|5[0-35-9]|6[567]|7[0-8]|8\d|9[0-35-9])\d{8}$/;
+                $('.tel_hint').css('display', 'none');
+                if (tel.test($('#tel').val())) {
+                    $('.tel_error').css('display', 'none');
+                    $('.tel_right').css('display', 'inline-block');
+                    return true;
+                } else {
+                    $('.tel_right').css('display', 'none');
+                    $('.tel_error').css('display', 'inline-block');
+                    return false;
+                }
+            }
+            $('#pwd').change(verifyPwd);
+
+            function verifyPwd() {
+                $('.pwd_hint').css('display', 'none');
+                var pwd = /[0-9A-Za-z-_.]{6}/;
+                if (pwd.test($('#tel').val())) {
+                    $('.pwd_right').css('display', 'inline-block');
+                    $('.pwd_error').css('display', 'none');
+                    return true;
+                } else {
+                    $('.pwd_right').css('display', 'none');
+                    $('.pwd_error').css('display', 'inline-block');
+                    return false;
+                }
+            }
+            $('#confirm').change(verifyConfirm);
+
+            function verifyConfirm() {
+                if ($('#pwd').val() === $('#confirm').val()) {
+                    $('.confirm_right').css('display', 'inline-block');
+                    $('.confirm_error').css('display', 'none');
+                    return true;
+                } else {
+                    $('.confirm_right').css('display', 'none');
+                    $('.confirm_error').css('display', 'inline-block');
+                    return false;
+                }
+            }
+
+            $('.auth_code').click(function (e) {
+                e.preventDefault();
+                $(this).prop('disabled', true);
+                var random = parseInt(Math.random() * 10e6);
+                $('#code').val(random);
+                // $(this).html(sec + ' s后再次获取');
+                var sec = 16;
+                var timer = setInterval(function () {
+                    $('.code_right').css('display', 'inline-block');
+                    sec--;
+                    // sec < 10 ? '0' + sec : sec;
+                    // console.log(sec);
+                    if (sec < 10) {
+                        $('.auth_code').html('0' + sec + ' s后再次获取');
+                    } else {
+                        $('.auth_code').html(sec + ' s后再次获取');
+                    }
+
+                    if (sec === 0) {
+                        $('.code_right').css('display', 'none');
+                        $('.auth_code').html('获取短信验证码');
+                        clearInterval(timer);
+                        $('.auth_code').prop('disabled', false);
+
+                    }
+                }, 1000)
+                // setInterval(timer);
+            })
+            $('.check').change(verifyCheck);
+
+            function verifyCheck() {
+                if ($('.check').prop('checked')) {
+                    $('.check_error').css('display', 'none');
+                    // window.location.href = 'login.html';
+                    return true;
+                } else {
+                    $('.check_error').css('display', 'inline-block');
+                    return false;
+                }
+            }
+
+            $('form').submit(function (e) {
+                // e.preventDefault();
+                localStorage.clear();
+                if (!$('#tel').val() || !verifyTel() || !verifyPwd() || !verifyConfirm()) {
+                    e.preventDefault();
+                    alert('请输入正确的注册信息!');
+                    $('.tel_hint').addClass('error');
+                    $('.pwd_hint').addClass('error');
+                } else if (!verifyCheck()) {
+                    e.preventDefault();
+                    alert('请勾选同意用户协议!');
+                } else {
+                    // e.preventDefault();
+                    let data = $('#register_form').serialize();
+                    // console.log(data);
+                    let obj = {
+                        'tel': data.split('&')[0].split('=')[1],
+                        'password': data.split('&')[1].split('=')[1]
+                    }
+
+                    localStorage.setItem('data', JSON.stringify(obj));
+                    // localStorage.setItem('password', data.split('&')[1].split('=')[1]);
+                    // localStorage.setItem('tel', data.split('&')[0].split('=')[1]);
+                }
+
+            })
+        })
+    </script>
 </body>
 
 </html>

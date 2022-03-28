@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <!-- 引入main主体样式 -->
     <link rel="stylesheet" href="./css/login.css">
+    <script src="js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -38,23 +39,34 @@
                 </li>
                 <li class="account_body">
                     <p class="notice">公共场所不建议自动登录，以免账号丢失</p>
-                    <form action="log.php">
+                    <form action="index.html">
                         <ul>
-                            <li class="account"><i></i><input type="text" placeholder="邮箱/用户/手机号"></li>
-                            <li class="pwd"><i></i><input type="password" placeholder="请输入密码"></li>
-                            <li class="auto">
+                            <li class="account">
+                                <i></i>
+                                <input type="text" name="tel" id="tel" placeholder="邮箱/用户/手机号" autofocus>
+
+                            </li>
+                            <li class="pwd">
+                                <i></i>
+                                <input type="password" name="password" id="password" placeholder="请输入密码">
+                                <div class="eye">
+                                    <img src="images/eye_close.png" class="eye_img">
+                                </div>
+
+                            </li>
+                            <li class=" auto">
                                 <input type="checkbox" id="auto_login">
                                 <label for="auto_login">自动登录</label>
                                 <a href="#">忘记密码？</a>
                             </li>
-                            <li class="btn"><button>登录</button></li>
+                            <li class="btn"><button type="submit" class="submit">登录</button></li>
                         </ul>
                     </form>
                 </li>
 
                 <li class="icons">
                     <img src="./upload/log_03.png" alt="">
-                    <em>立即注册</em>
+                    <a href="./register.html">立即注册</a>
                 </li>
             </ul>
         </div>
@@ -89,7 +101,7 @@
         var mode = document.querySelectorAll('.mode a');
         var scan_body = document.querySelector('.scan_body');
         var account_body = document.querySelector('.account_body');
-        console.log(mode);
+        // console.log(mode);
         mode[0].addEventListener('mouseenter', function () {
             this.className = 'current';
             scan_body.style.display = 'block';
@@ -101,6 +113,41 @@
             scan_body.style.display = 'none';
             account_body.style.display = 'block';
             mode[0].className = '';
+        })
+        var submit = document.querySelector('.submit');
+        var checked = document.querySelector('#auto_login');
+        var tel = document.querySelector('#tel');
+        var pwd = document.querySelector('#password');
+
+
+        submit.addEventListener('click', function (e) {
+            // console.log(tel.value);
+            // console.log(pwd.value);
+            // e.preventDefault();
+
+            let data = JSON.parse(localStorage.getItem('data'));
+            // console.log(data);
+            // console.log(data.tel);
+            if (!data) {
+                e.preventDefault();
+                alert('该用户名不存在, 请先注册!');
+            } else if (tel.value != data.tel || pwd.value != data.password) {
+                e.preventDefault();
+                alert('请输入正确的用户名和密码!');
+            }
+        })
+        // var eye_open = document.querySelector('.eye_open');
+        // var eye_close = document.querySelector('.eye_close');
+        var eye_times = 0;
+        $('.eye').click(function () {
+            eye_times++;
+            if (eye_times % 2) {
+                $('.eye_img').prop('src', 'images/eye_open.png');
+                pwd.type = 'text';
+            } else {
+                $('.eye_img').prop('src', 'images/eye_close.png');
+                pwd.type = 'password';
+            }
         })
     </script>
 </body>

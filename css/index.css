@@ -205,6 +205,16 @@
     height: 145px;
 }
 
+.recommend .recom_bd li:hover,
+.likes_bd li:hover {
+    /* 盒子阴影 */
+    box-shadow: 4px 20px 40px 5px rgba(0, 0, 0, .2);
+    /* 盒子向上移动效果，改变上外边距 */
+    margin-top: 8px;
+    transition: all .5s;
+    /* border: 1px solid #ccc; */
+}
+
 .recommend .recom_bd li:nth-child(-n+3):after {
     position: absolute;
     top: 9px;

@@ -114,9 +114,39 @@ header {
 .pwd input {
     float: left;
     /* left: 40px; */
-    /* width: 263px; */
+    width: 262px;
     line-height: 36px;
     padding-left: 10px;
+}
+
+.pwd input {
+    width: 230px;
+}
+
+.pwd .eye {
+    /* display: block; */
+    float: left;
+    /* top: -6px; */
+    /* right: 6px; */
+    width: 24px;
+    height: 24px;
+    /* line-height: 36px; */
+    /* background: url(../images/eye_close.png) no-repeat; */
+    /* background-size: 24px; */
+    /* background-position: 6px; */
+    /* background-color: #333; */
+}
+
+.pwd .eye img {
+    margin-top: 6px;
+    /* margin-right: 20px; */
+    /* padding-right: 6px; */
+    width: 100%;
+}
+
+.pwd .open {
+    display: none;
+    background: url(../images/eye_open.png) no-repeat;
 }
 
 
@@ -153,6 +183,6 @@ header {
     left: 37px;
 }
 
-.icons em {
+.icons a {
     color: #3aa2e4;
 }
