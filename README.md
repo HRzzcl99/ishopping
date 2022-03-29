@@ -1,5 +1,11 @@
 # ishopping
 
+
+项目负责人: huangrong<br>
+指导老师：  pink<br>
+项目地址：  https://hrzzcl99.github.io/ishopping/
+ 
+
 项目包含页面:<br>
 1. index.html  电商网站主页<br>
 2. list.html   商品详情页 (点击轮播图跳转)<br>
@@ -16,10 +22,11 @@
 
 
 每个页面实现基础交互功能, 并包含以下JS原生代码:<br>
-1. 轮播图<br>
-2. 商品放大镜效果<br>
-3. 电梯导航栏<br>
-4. 下拉菜单tab栏切换<br><br>
+1. 轮播图
+2. 商品放大镜效果
+3. 电梯导航栏
+4. 下拉菜单tab栏切换
+5. 用户注册和登录匹配
+6. 密码明文显示切换
+7. 购物车商品加减并计算总额
 
-项目负责人: huangrong<br>
-指导老师pink<br>
