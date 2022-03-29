@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="./css/index.css">
     <!-- 引入jQuery库 -->
     <script src="js/jquery.min.js"></script>
+    <!-- 引入模板引擎 js文件 -->
+    <script src="js/template-web.js"></script>
     <!-- 引入swiper js 文件 -->
     <script src="js/swiper-bundle.min.js"></script>
     <!-- 引入 index js 文件 -->
@@ -81,9 +83,13 @@
         </div>
         <!-- <img src="./images/logo.png" alt="logo"> -->
         <div class="search">
-            <input type="text" placeholder="欢迎选购, 按s光标定位到此处">
+            <input id="iptSearch" type="text" placeholder="欢迎选购, 按s光标定位到此处" autofocus>
             <button>搜索</button>
+            <div class="suggest-list">
+
+            </div>
         </div>
+
         <ul class="hotwords">
             <li>优惠首购</li>
             <li>亿元优惠</li>
@@ -2085,7 +2091,16 @@
             </div>
         </div>
     </div>
-
+    <!-- 定义推荐搜索列表的渲染模板 -->
+    <script id="tpl-suggestList" type="text/html">
+        {{each result}}
+        <div class="suggest-item">
+            <a href="javascript:;" id={{$index}}>
+                {{$value[0]}}
+            </a>
+        </div>
+        {{/each}}
+    </script>
 </body>
 
 </html>

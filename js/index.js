@@ -8,11 +8,79 @@ $(function () {
     //         search.firstElementChild.focus();
     //     }
     // })
+
     alert(
         "项目包含页面: \n index.html 电商网站主页\n list.html 商品详情页 (点击轮播图跳转)\n login.html 用户登录页面\n shopcar.html 购物车页面\n submit.html 订单提交页面"
     )
-    alert(" 每个页面实现基础交互功能: \n轮播图 \n商品放大镜效果 \n电梯导航栏 \n下拉菜单tab栏切换 ")
+    alert(" 每个页面实现基础交互功能: \n轮播图 \n商品放大镜效果 \n电梯导航栏 \n下拉菜单tab栏切换 \n注册登录验证 \n搜索框推荐")
     alert(" 制作人:黄容\n 指导老师:pink \n 技术栈: html + css + jQuery")
+
+    // 搜索栏推荐
+    //搜索框检测用户输入
+    var up = -1;
+    $('#iptSearch').blur(function () {
+        up = -1;
+        $('.suggest-list').empty().hide();
+    })
+    $('#iptSearch').keyup(function (e) {
+        clearTimeout(timer);
+        var keywords = $(this).val().trim();
+        //没有输入则隐藏搜索推荐列表
+        if (keywords.length <= 0) {
+            up = -1;
+            return $('.suggest-list').empty().hide();
+        }
+        if (e.keyCode === 27) {
+            up = -1;
+            $(this).blur();
+            return $('.suggest-list').empty().hide();
+        }
+        console.log(e.keyCode);
+        //允许用户利用上下键 在搜索推荐列表中选择
+        if (e.keyCode === 40 || e.keyCode === 38) {
+            if (e.keyCode === 40) {
+                up++;
+            } else {
+                up--;
+            }
+            if (Math.abs(up) > $('.suggest-list').children().length) {
+                up = 0;
+            }
+            $('.suggest-item a').removeClass();
+            $('.suggest-item a').eq(up).addClass('suggest-current');
+        } else {
+            debounceSearch(keywords);
+        }
+    })
+    //发起JSONP请求 获取并渲染搜索推荐列表
+    function getSuggestList(keywords) {
+        $.ajax({
+            url: 'https://suggest.taobao.com/sug?q=' + keywords,
+            dataType: 'jsonp',
+            success: function (res) {
+                console.log(res);
+                renderSuggestList(res);
+            }
+        });
+    }
+    //渲染搜索列表
+    function renderSuggestList(res) {
+        if (res.result.length <= 0) {
+            return $('.suggest-list').empty().hide();
+        }
+        var tplStr = template('tpl-suggestList', res);
+        $('.suggest-list').html(tplStr).show();
+    }
+    //输入框防抖
+    var timer = null;
+
+    function debounceSearch(keywords) {
+        timer = setTimeout(function () {
+            getSuggestList(keywords);
+        }, 500)
+    }
+
+
 
     //轮播图模块
     var swiper = new Swiper(".mySwiper", {

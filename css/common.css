@@ -98,6 +98,7 @@
     height: 35px;
     border: 2px solid #b1191a;
     border-right: 0;
+    padding-left: 10px;
 }
 
 .header .search input::placeholder {
@@ -114,6 +115,33 @@
     font-size: 16px;
     color: white;
 }
+
+.suggest-list {
+    position: absolute;
+    width: 540px;
+    top: 35px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-indent: 10px;
+    /* padding-left: 10px; */
+    /* iframe */
+    z-index: 99999;
+}
+
+.suggest-list .suggest-item a {
+    display: block;
+    line-height: 30px;
+}
+
+.suggest-list .suggest-item a:hover {
+    background-color: #f1f1f1;
+}
+
+.suggest-current {
+    background-color: #f1f1f1;
+    color: #c81623;
+}
+
 
 .header .hotwords {
     position: absolute;
