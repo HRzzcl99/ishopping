@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest上传文件,显示进度条</title>
+</head>
+
+<body>
+    <!-- 文件选择框 -->
+    <input type="file" name="file" id="file1">
+    <!-- 上传按钮 -->
+    <button id="btn">上传文件</button>
+    <!-- 显示上传到服务器的图片 -->
+    <br>
+    <img src="" alt="" id="img" width="800">
+    <script>
+        var btn = document.querySelector('#btn');
+        var img = document.querySelector('#img');
+
+
+        btn.addEventListener('click', function () {
+            //1. 获取文件列表
+            var files = document.querySelector('#file1').files;
+            if (files.length <= 0) {
+                alert('请选择要上传的文件');
+            } else {
+                console.log('用户选择了上传文件');
+            }
+            // 2. 将文件列表追加到formData
+            var formData = new FormData();
+            formData.append('avatar', files[0]);
+
+            // 3. 发起XMLHttpRequest POST请求
+            var xhr = new XMLHttpRequest();
+
+            //监听文件上传的进度, 进度分为: 上传进度和下载进度  
+            //注意位置一定要放在创建xhr对象之后s
+            xhr.upload.onprogress = function (e) {
+                if (e.lengthComputable) { //是一个布尔值，表示当前上传的资源是否具有可计算的长度
+                    var percent = Math.ceil(e.loaded / e.total * 100);
+                    console.log(percent);
+                } else {
+                    console.log('上传进度无法显示');
+                }
+            }
+            xhr.open('POST', 'http://www.liulongbin.top:3006/api/upload/avatar');
+            xhr.send(formData);
+            //4. 监听状态变化事件
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    console.log(data);
+                    if (data.status === 200) { //说明上传文件成功 则将上传图片显示到页面中
+                        img.src = 'http://www.liulongbin.top:3006' + data.url;
+                    } else {
+                        console.log('图片上传失败: ' + data.message);
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
